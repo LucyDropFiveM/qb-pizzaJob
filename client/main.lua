@@ -22,8 +22,7 @@ end)
 RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
 	onDuty = duty
 end)
-
-Citizen.CreateThread(function()
+CreateThread(function()
     Drusilla = AddBlipForCoord(-1197.32, -897.655, 13.995)
     SetBlipSprite (Drusilla, 106)
     SetBlipDisplay(Drusilla, 4)
