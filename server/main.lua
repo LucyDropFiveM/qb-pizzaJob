@@ -1,12 +1,5 @@
 QBCore = exports['qb-core']:GetCoreObject()
 
--- vector3(-1337.22, -1060.44, 7.39) Preppa sallad o skit
-
--- vector3(-1340.1, -1062.0, 7.39) gör pizza deg
-
--- vector3(-1338.53, -1058.13, 7.94) tvätta händer
-
-
 
 
 
