@@ -11,3 +11,6 @@ You have to make the new job named : pizzajob
 
 
 Look through the client and server main.lua too see all the items you have to add.
+
+
+MLO used in video : https://www.gta5-mods.com/maps/mlo-drusilla-s-venetian-restaurant-gambling-basement
