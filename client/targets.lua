@@ -11,7 +11,7 @@ CreateThread(function()
                 {  
                 event = "pizzajob:client:DutyB",
                 icon = "far fa-clipboard",
-                label = "Stämpla In/Ut",
+                label = "Clock In/Out",
                 job = Config.Job,
                 },
             },
@@ -34,7 +34,7 @@ CreateThread(function()
             {
             event = "pizzajob:client:Tray1",
             icon = "far fa-clipboard",
-            label = "Bricka",
+            label = "Tray",
             },
         },
         distance = 1.5
@@ -74,7 +74,7 @@ CreateThread(function()
                     {
                         event = "pizzajob:client:execute1",
                         icon = "fas fa-credit-card",
-                        label = "Preppa Mat",
+                        label = "Prep food",
                         job = "pizzajob",
                     },
                 },
@@ -94,7 +94,7 @@ CreateThread(function()
                         event = "pizzajob:client:execute2",
 
                         icon = "fas fa-credit-card",
-                        label = "Tillaga",
+                        label = "Cook",
                         job = "pizzajob",
                     },
                 },
@@ -109,8 +109,8 @@ end)
 RegisterNetEvent("pizzajob:client:bill")
 AddEventHandler("pizzajob:client:bill", function()
     local bill = exports['qb-input']:ShowInput({
-        header = "Skapa Kvitto",
-		submitText = "Fakturera",
+        header = "Make Receipt",
+		submitText = "Bill",
         inputs = {
             {
                 text = "Server ID(#)",
@@ -119,8 +119,8 @@ AddEventHandler("pizzajob:client:bill", function()
                 isRequired = true 
             },
             {
-                text = "Fakturerings Summa", 
-                name = "faktura", 
+                text = "Bill amount", 
+                name = "bill", 
                 type = "number", 
                 isRequired = false 
             }
