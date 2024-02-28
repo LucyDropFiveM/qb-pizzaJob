@@ -92,18 +92,18 @@ AddEventHandler("pizzajob:server:billPlayer", function(playerId, amount)
                             ['sender'] = biller.PlayerData.charinfo.firstname
                         })
                         TriggerClientEvent('qb-phone:RefreshPhone', billed.PlayerData.source)
-                        TriggerClientEvent('QBCore:Notify', source, 'Faktura Skickad!', 'success')
-                        TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, 'Ny Faktura')
+                        TriggerClientEvent('QBCore:Notify', source, 'Bill sent!', 'success')
+                        TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, 'New bill')
                     else
-                        TriggerClientEvent('QBCore:Notify', source, 'Måste vara en siffra över 0', 'error')
+                        TriggerClientEvent('QBCore:Notify', source, 'Number has to be above 0', 'error')
                     end
                 else
-                    TriggerClientEvent('QBCore:Notify', source, 'Du kan inte fakturera dig själv', 'error')
+                    TriggerClientEvent('QBCore:Notify', source, 'You can/t bill youself..', 'error')
                 end
             else
-                TriggerClientEvent('QBCore:Notify', source, 'Spelare ej online', 'error')
+                TriggerClientEvent('QBCore:Notify', source, 'Player not online', 'error')
             end
         else
-            TriggerClientEvent('QBCore:Notify', source, 'Ej tillgång', 'error')
+            TriggerClientEvent('QBCore:Notify', source, 'No access', 'error')
         end
 end)
