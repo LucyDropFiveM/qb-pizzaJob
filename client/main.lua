@@ -59,13 +59,13 @@ end)
 RegisterCommand('1', function()
 exports['qb-menu']:openMenu({
         {
-            header = 'Tillaga Mat',
+            header = 'Cook food',
             icon = 'fas fa-code',
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
-            header = 'Koka Spaghetti',
-            txt = 'Koka spaghetti till Pesto Pasta',
+            header = 'Cook spaghetti',
+            txt = 'Cook spaghetti for pesto pasta',
             icon = 'fas fa-code-merge',
             params = {
                 isServer = false,
@@ -73,8 +73,8 @@ exports['qb-menu']:openMenu({
             }
         },  
         {
-            header = 'Rosta Bröd',
-            txt = 'Rosta bröd till bruschetta',
+            header = 'Roast bread',
+            txt = 'Roast the bread, used for bruschetta',
             icon = 'fas fa-code-pull-request',
             -- disabled = false, -- optional, non-clickable and grey scale
             -- hidden = true, -- optional, hides the button completely
@@ -91,13 +91,13 @@ end)
 RegisterCommand('2', function()
 exports['qb-menu']:openMenu({
         {
-            header = 'Tillaga Mat',
+            header = 'Cook food',
             icon = 'fas fa-code',
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
-            header = 'Tillaga Pesto Pasta',
-            txt = 'Pesto, Kokad Spaghetti',
+            header = 'Make Pesto Pasta',
+            txt = 'Pesto, Cooked Spaghetti',
             icon = 'fas fa-code-merge',
             params = {
                 isServer = false,
@@ -105,8 +105,8 @@ exports['qb-menu']:openMenu({
             }
         },  
         {
-            header = 'Tillaga Bruschetta',
-            txt = 'Rostat Bröd, Sallad',
+            header = 'Make Bruschetta',
+            txt = 'Toasted Bread, Salad',
             icon = 'fas fa-code-pull-request',
             -- disabled = false, -- optional, non-clickable and grey scale
             -- hidden = true, -- optional, hides the button completely
@@ -116,8 +116,8 @@ exports['qb-menu']:openMenu({
             }
         },
         {
-            header = 'Tillaga Pizza',
-            txt = 'Pizza Deg, Tomatsås, Fefferoni',
+            header = 'Make Pizza',
+            txt = 'Pizza Dough, Tomatosauce, Peperoni',
             icon = 'fas fa-code-pull-request',
             -- disabled = false, -- optional, non-clickable and grey scale
             -- hidden = true, -- optional, hides the button completely
@@ -130,7 +130,7 @@ exports['qb-menu']:openMenu({
 end)
 
 RegisterNetEvent('pizzajob:client:cookPasta', function(data)
-    QBCore.Functions.Progressbar('cookPasta', 'Kokar Pastan', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
+    QBCore.Functions.Progressbar('cookPasta', 'Cooking pasta', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
     disableMovement = true,
     disableCarMovement = true,
     disableMouse = false,
@@ -149,7 +149,7 @@ end)
 
 
 RegisterNetEvent('pizzajob:client:cookBread', function(data)
-        QBCore.Functions.Progressbar('cookBread', 'Rostar Bröden', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('cookBread', 'Toasting Bread', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -167,7 +167,7 @@ RegisterNetEvent('pizzajob:client:cookBread', function(data)
 end)
 
 RegisterNetEvent('pizzajob:client:cookBrus', function(data)
-        QBCore.Functions.Progressbar('cookBrus1', 'Lägger På Salladen...', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('cookBrus1', 'Putting on the salad', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -186,7 +186,7 @@ end)
 
 
 RegisterNetEvent('pizzajob:client:cookPizza', function(data)
-    QBCore.Functions.Progressbar('cookPizza', 'Lägger på Fefferoni och Tomatsås...', 10000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
+    QBCore.Functions.Progressbar('cookPizza', 'Putting on peperoni', 10000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
     disableMovement = true,
     disableCarMovement = true,
     disableMouse = false,
@@ -204,7 +204,7 @@ end)
 end)
 
 RegisterNetEvent('pizzajob:client:makePestoPasta', function(data)
-        QBCore.Functions.Progressbar('makePestoPasta', 'Lagar Pesto Pasta', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
+        QBCore.Functions.Progressbar('makePestoPasta', 'Cooking Pesto Pasta', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -222,7 +222,7 @@ RegisterNetEvent('pizzajob:client:makePestoPasta', function(data)
 end)
 
 RegisterNetEvent('pizzajob:client:makePizzaPrep', function(data)
-            QBCore.Functions.Progressbar('makePizzaPrep', 'Lägger på alla pålägg', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
+            QBCore.Functions.Progressbar('makePizzaPrep', 'Puts on ornaments', 1000, false, true, { -- Name | Label | Time | useWhileDead | canCancel
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -240,7 +240,7 @@ RegisterNetEvent('pizzajob:client:makePizzaPrep', function(data)
 end)
 
 RegisterNetEvent('pizzajob:client:failedTask', function(data)
-    QBCore.Functions.Notify('Något gick fel', 'error', 5500)
+    QBCore.Functions.Notify('Something went wrong', 'error', 5500)
 end)
 
 RegisterNetEvent('pizzajob:client:execute1', function(data) -- Preppa Mat
